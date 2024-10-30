@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- <script>
+        
+        function checkAuth() {
+        const login = localStorage.getItem('login');
+        const password = localStorage.getItem('password');
+
+       
+        if (login && password) {
+            window.location.href = 'home.html';
+        }
+    }
+
+    
+    window.onload = checkAuth;
+</script> -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #EAEBEE;
+        }
+
+        .login {
+            /* background-color: #EAEBEE; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+        
+        .login input {
+            background-color: #E7EEFE;
+            border: #C7CDDA 1px solid;
+            width: 210px;
+            height: 25px;
+            border-radius: 3px;
+        }
+
+        .registration {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #toRegistration, #toLogin {
+            cursor: pointer;
+        }
+
+        .forms {
+            width: 300px; /* Задайте желаемую ширину */
+            height: 300px;
+            margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .login p {
+            font-family: "Montserrat", serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .icon-img {
+            width: 48px;
+            height: 48px;
+            position: relative;
+            top: 10px; /* Сместите картинку вниз на нужное количество пикселей */
+        }
+
+        #passwordd {
+            margin-top: 5px;
+        }
+
+        #login-avt {
+            margin-top: 15px;
+            background-color: #4f6fafdb;
+            width: 215px;
+            height: 25px;
+            border: none;
+            border-radius: 3px;
+            color: #FFFFFF;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+        }
+
+        .forms1 {
+            width: 300px;
+            height: 165px;
+            margin: 20px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* Добавляем направление столбцом */
+            text-align: center; /* Выравниваем текст по центру */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        #create-acc {
+            background-color: #91ce6f;
+            color: #FFFFFF;
+            border: none;
+            width: 210px;
+            height: 25px;
+            border-radius: 3px;
+        }
+
+        #create-acc-buis {
+            background-color: #FFFFFF;
+            color: #4464A5;
+            border: #4464A5 1px solid;
+            width: 210px;
+            height: 25px;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+
+        #reg p, #politika-next-loginn, #politika-next-loginnn {
+            font-size: 11px;
+            margin-top: 12px;
+            font-family: "Montserrat", serif;
+            color: #9EA4AD;
+        }
+
+        #reg span, #reg-formss span {
+            color: #666D78;
+        }
+
+        .reg-form {
+            width: 300px; /* Задайте желаемую ширину */
+            height: 380px;
+            margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .your-log {
+            position: relative;
+            top: -10px;
+            color: #616365;
+            font-family: "Montserrat", serif;
+            font-size: 13px;
+        }
+
+        #type-log {
+            font-family: "Montserrat", serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        #types-login, #types-password, #types-name {
+            background-color: #F3F3F3;
+            border: #C7CDDA 1px solid;
+            width: 210px;
+            height: 25px;
+            border-radius: 3px;
+            position: relative;
+            top: -10px;
+        }
+
+        #saves-log {
+            color: #5d5e60;
+            font-family: "Montserrat", serif;
+            font-size: 13.5px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-left: 38px;
+        }
+
+        #saves-log {
+            margin-left: 5px; /* Отступ от чекбокса */
+            text-align: left; /* Выровнять текст по левому краю */
+        }
+
+        #next-loginn {
+            background-color: #8BABEE;
+            border: none;
+            color: #FFFFFF;
+            width: 215px;
+            height: 25px;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+
+        #politika-next-loginn, #politika-next-loginnn {
+            margin-top: 30px;
+        }
+
+        #error-good, #log--est, #englishh-error, #zero-simv, #error-good-password, #error-name {
+            display: none;
+            font-family: "Montserrat", serif;
+            color: #ff6464;
+            font-size: 15px;
+        }
+
+        #good-registr {
+            display: none;
+            font-family: "Montserrat", serif;
+            color: #738a6a;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #next-loginns, #next-name {
+            background-color: #8BABEE;
+            border: none;
+            color: #FFFFFF;
+            width: 215px;
+            height: 25px;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+
+        #form3 {
+            width: 300px; /* Задайте желаемую ширину */
+            height: 315px;
+            margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #form4 {
+            width: 300px; /* Задайте желаемую ширину */
+            height: 315px;
+            margin: 50px auto 0; /* Добавляем верхний отступ в 50px и центрируем блок */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div id="form" class="forms">
+    <div class="login">
+        <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
+        <p>Вход Connect</p>
+        <input id="login-input" type="text" placeholder="Логин" required>
+        <input id="passwordd" type="password" placeholder="Пароль" min="5" max="20">
+        <button onclick="loginAvtBut()" id="login-avt">Вход</button>
+    </div> 
+</div>
+
+<div id="form1" class="forms1">
+    <div id="reg" class="reg">
+        <button id="create-acc">Создать аккаунт</button>
+        <button id="create-acc-buis">Создать страницу для бизнеса</button>
+        <p>После регистрации вы получите доступ <br>ко всем возможностям Connect ID <br><span>Узнать больше</span></p>
+    </div> 
+</div>
+
+<div id="form2" class="reg-form" style="display: none;">
+    <div class="reg-formss">
+        <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
+        <p id="type-log">Придумайте логин</p>
+        <p class="your-log">Ваш логин будет <br>использоваться для входа в аккаунт</p>
+        <input type="text" id="types-login" placeholder="Введите логин">
+        
+        <div class="checkbox-container">
+            <input type="checkbox">
+            <a id="saves-log">Сохранить вход</a>
+        </div>
+
+        <button onclick="validateLogin()" id="next-loginn">Продолжить</button>
+        <p id="zero-simv">Поле логин не <br>может быть пустым</p>
+        <p id="error-good">Ваш логин менее 5 символов</p>
+        <p id="log--est">Ваш логин занят<br>Придумайте новый</p>
+        <p id="englishh-error">Логин должен состоять только из<br>английского синтаксиса</p>
+        <p id="politika-next-loginn">Нажимая «Продолжить», вы принимаете <br><span>пользовательское соглашение и политику <br>конфиденциальности</span></p>
+    </div> 
+</div>
+
+<div id="form3" class="" style="display: none;">
+    <div id="reg-formss" class="reg-formss">
+        <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
+        <p id="type-log">Придумайте пароль</p>
+        <p class="your-log">Ваш пароль будет <br>использоваться для входа в аккаунт</p>
+        <input type="text" id="types-password" placeholder="Введите пароль">
+        
+
+        <button id="next-loginns">Продолжить</button>
+        <p id="error-good-password">Ваш пароль менее 6 <br>символов</p>
+        <p id="politika-next-loginnn">Нажимая «Продолжить», вы принимаете <br><span>пользовательское соглашение и политику <br>конфиденциальности</span></p>
+    </div> 
+</div>
+
+<div id="form4" class="" style="display: none;">
+    <div id="reg-formss" class="reg-formss">
+        <img class="icon-img" src="img/free-icon-linux-2333464 (1).png" alt="">
+        <p id="type-log">Придумайте имя</p>
+        <p class="your-log">Ваше имя будет отображено на сайте</p>
+        <input type="text" id="types-name" placeholder="Введите имя">
+        
+
+        <button id="next-name">Продолжить</button>
+        <p id="good-registr">Успешная регистрация</p>
+        <p id="error-name">Введите корректное имя</p>
+        <p id="politika-next-loginn">Нажимая «Продолжить», вы принимаете <br><span>пользовательское соглашение и политику <br>конфиденциальности</span></p>
+    </div> 
+</div>
+
+<h1>Registration</h1>
+  <form id="registrationForm">
+    <input type="text" id="regUsername" placeholder="Username" required>
+    <input type="password" id="regPassword" placeholder="Password" required>
+    <button type="submit">Register</button>
+  </form>
+  <div id="registrationMessage"></div>
+
+  <h1>Login</h1>
+  <form id="loginForm">
+    <input type="text" id="loginUsername" placeholder="Username" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+  <div id="loginMessage"></div>
+
+        
+<script src="registration.js" defer></script>
+<script src="login.js"></script>
+</html>

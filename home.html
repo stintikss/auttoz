@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница HTML2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Добро пожаловать на страницу HTML2!</h1>
+    <!-- Содержимое вашей страницы -->
+
+    <script>
+function checkAuth() {
+    const login = localStorage.getItem('login');
+    const password = localStorage.getItem('password');
+
+    // Проверяем наличие токена, логина и пароля
+    if (!login || !password) {
+        // Если отсутствует один из них, перенаправляем на страницу входа
+        window.location.href = '/index.html';
+    }
+}
+
+// Вызываем функцию проверки при загрузке страницы
+window.onload = checkAuth;
+
+    </script>
+</body>
+</html>
